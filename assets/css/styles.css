@@ -4,8 +4,7 @@
 /*===VARIAVEIS CSS===*/
 :root {
    /*===CORES===*/
-   --hue-color: 240;
-   /* azul 240 - verde 154 - laranja 25 */
+   --hue-color: 240; /* azul 240 - verde 154 - laranja 25 */
 
    --first-color: hsl(var(--hue-color), 53%, 49%);
    --title-color: hsl(var(--hue-color), 53%, 15%);
@@ -57,16 +56,25 @@ body.dark-theme {
    top: -1rem;
    right: -1rem;
    display: flex;
-   padding: .25rem;
+   padding: 0.25rem;
    border-radius: 50%;
-   box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1) inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
+   box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 0%, 100%, 1),
+               inset 1px 1px 1px hsla(var(--hue-color), 30%, 86%, 1);
    color: var(--first-color);
    cursor: pointer;
 }
 
 /*=== BOX SHADOW TEMA ESCURO ===*/
 .dark-theme .clock__circle {
-   box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1) -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1);
+   box-shadow: 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1),
+               -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+               inset -6px -6px 16px hsla(var(--hue-color), 8%, 20%, 1),
+               inset 6px 6px 16px hsla(var(--hue-color), 8%, 12%, 1);
+}
+
+.dark-theme .clock__theme{
+   box-shadow: inset -1px -1px 1px hsla(var(--hue-color), 8%, 20%, 1),
+               inset 1px 1px 1px hsla(var(--hue-color), 8%, 12%, 1);
 }
 
 /*=== BASE ===*/
@@ -262,3 +270,13 @@ a {
 }
 
 /*=== MEDIA QUERIES ===*/
+@media screen and (min-widht: 968px) {
+   .container{
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .clock__logo{
+      margin-bottom: 3rem;
+   }
+}

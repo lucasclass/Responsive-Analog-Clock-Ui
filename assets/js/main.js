@@ -19,7 +19,7 @@ setInterval(clock, 1000) // 1000 = 1s
 
 /*===RELÓGIO E TEXTO DE DATA===*/
 const textHour = document.getElementById('text-hour'),
-    textMinutes = document.getElementById('text-minute'),
+    textMinutes = document.getElementById('text-minutes'),
     textAmPm = document.getElementById('text-ampm'),
     dateDay = document.getElementById('date-day'),
     dateMonth = document.getElementById('date-month'),
@@ -31,7 +31,7 @@ const clockText = () => {
     let hh = date.getHours(),
         ampm,
         mm = date.getMinutes(),
-        dat = date.getDate(),
+        day = date.getDate(),
         month = date.getMonth(),
         year = date.getFullYear()
     
